@@ -88,40 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // accordion
 
-const chapters = document.querySelectorAll('details');
-chapters.forEach((chapter) => {
-  chapter.addEventListener('toggle', function () {
-    $(".faq_item_a").hide();
-    const openElem = $(this).find(".faq_item_a");
-    // openElem.slideToggle("slow");
-    // console.log(openElem[0]);
-
-    if ($(this).open) {
-      openElem.slideUp("slow");
-      console.log(openElem[0]);
-    } else {
-      openElem.slideDown("slow");
-      console.log(openElem[0]);
-    }
+$(function () {
+  $(".faq_item_q").click(function () {
+    $(this).parent().toggleClass("faq_item_open");
+    $(this).next().slideToggle("slow");
   });
 });
-
-// $(function () {
-// $(".js_details").click(function () {
-//   $(".faq_item_a").hide();
-//   const openElem = $(this).find(".faq_item_a");
-//   // openElem.slideToggle("slow");
-//   // console.log(openElem[0]);
-
-//   if ($(".js_details").open) {
-//     openElem.slideUp("slow");
-//     console.log(openElem[0]);
-//   } else {
-//     openElem.slideDown("slow");
-//     console.log(openElem[0]);
-//   }
-// });
-// });
 
 
 // popup
