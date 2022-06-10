@@ -31,14 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const telElems = document.querySelectorAll(".tel");
     const mailElems = document.querySelectorAll(".mail");
 
-    const radioError = (elem, errorMessage) => {
-      const errorSpan = document.createElement("span");
-      errorSpan.classList.add(errorClassName);
-      errorSpan.setAttribute("aria-live", "polite");
-      errorSpan.textContent = errorMessage;
-      elem.parentNode.parentNode.parentNode.appendChild(errorSpan);
-    };
-
     const createError = (elem, errorMessage) => {
       const errorSpan = document.createElement("span");
       errorSpan.classList.add(errorClassName);
@@ -92,6 +84,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// accordion
+
+const chapters = document.querySelectorAll('details');
+chapters.forEach((chapter) => {
+  chapter.addEventListener('toggle', function () {
+    $(".faq_item_a").hide();
+    const openElem = $(this).find(".faq_item_a");
+    // openElem.slideToggle("slow");
+    // console.log(openElem[0]);
+
+    if ($(this).open) {
+      openElem.slideUp("slow");
+      console.log(openElem[0]);
+    } else {
+      openElem.slideDown("slow");
+      console.log(openElem[0]);
+    }
+  });
+});
+
+// $(function () {
+// $(".js_details").click(function () {
+//   $(".faq_item_a").hide();
+//   const openElem = $(this).find(".faq_item_a");
+//   // openElem.slideToggle("slow");
+//   // console.log(openElem[0]);
+
+//   if ($(".js_details").open) {
+//     openElem.slideUp("slow");
+//     console.log(openElem[0]);
+//   } else {
+//     openElem.slideDown("slow");
+//     console.log(openElem[0]);
+//   }
+// });
+// });
+
 
 // popup
 
