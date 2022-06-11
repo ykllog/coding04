@@ -94,22 +94,23 @@ chapters.forEach((chapter) => {
     $(".faq_item_a").hide();
     const openElem = $(this).find(".faq_item_a");
 
-    const parent = $(this).parent();
     const main = $(this);
+    const parent = $(this).parent();
 
     if (chapter.open) {
       $(this).parent().removeClass("faq_item_close");
-      const test = $(this).parent();
+
       console.log(main[0]);
       console.log(parent[0]);
 
       openElem.slideDown("slow");
     } else {
       $(this).parent().addClass("faq_item_close");
+
       console.log(main[0]);
       console.log(parent[0]);
 
-      openElem.slideDown("slow");
+      openElem.slideUp("slow");
     }
   });
 });
