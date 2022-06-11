@@ -105,39 +105,21 @@ chapters.forEach((chapter) => {
 
       openElem.slideDown("slow");
     } else {
-      $(this).removeClass("faq_item_open");
       $(this).parent().addClass("faq_item_close");
       console.log(main[0]);
       console.log(parent[0]);
 
-      // openElem.slideUp("slow");
+      openElem.slideDown("slow");
     }
   });
 });
 
 // $(function () {
-// $(".js_details").click(function () {
-//   $(".faq_item_a").hide();
-//   const openElem = $(this).find(".faq_item_a");
-//   // openElem.slideToggle("slow");
-//   // console.log(openElem[0]);
-
-//   if ($(".js_details").open) {
-//     openElem.slideUp("slow");
-//     console.log(openElem[0]);
-//   } else {
-//     openElem.slideDown("slow");
-//     console.log(openElem[0]);
-//   }
+//   $(".faq_item_q").click(function () {
+//     $(this).parent().toggleClass("faq_item_open");
+//     $(this).next().slideToggle("slow");
+//   });
 // });
-// });
-
-$(function () {
-  $(".faq_item_q").click(function () {
-    $(this).parent().toggleClass("faq_item_open");
-    $(this).next().slideToggle("slow");
-  });
-});
 
 
 // popup
