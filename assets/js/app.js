@@ -88,6 +88,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // accordion
 
+const chapters = document.querySelectorAll('details');
+chapters.forEach((chapter) => {
+  chapter.addEventListener('toggle', function () {
+    $(".faq_item_a").hide();
+    const openElem = $(this).find(".faq_item_a");
+
+    const parent = $(this).parent();
+    const main = $(this);
+
+    if (chapter.open) {
+      $(this).parent().removeClass("faq_item_close");
+      const test = $(this).parent();
+      console.log(main[0]);
+      console.log(parent[0]);
+
+      openElem.slideDown("slow");
+    } else {
+      $(this).removeClass("faq_item_open");
+      $(this).parent().addClass("faq_item_close");
+      console.log(main[0]);
+      console.log(parent[0]);
+
+      // openElem.slideUp("slow");
+    }
+  });
+});
+
+// $(function () {
+// $(".js_details").click(function () {
+//   $(".faq_item_a").hide();
+//   const openElem = $(this).find(".faq_item_a");
+//   // openElem.slideToggle("slow");
+//   // console.log(openElem[0]);
+
+//   if ($(".js_details").open) {
+//     openElem.slideUp("slow");
+//     console.log(openElem[0]);
+//   } else {
+//     openElem.slideDown("slow");
+//     console.log(openElem[0]);
+//   }
+// });
+// });
+
 $(function () {
   $(".faq_item_q").click(function () {
     $(this).parent().toggleClass("faq_item_open");
