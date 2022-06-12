@@ -663,124 +663,6 @@ textarea {
   background-color: rgba(194, 194, 208, 0.1);
 }
 
-.faq_item .faq_item_inner {
-  background-color: #fff;
-}
-
-.faq_item .faq_item_inner > .faq_item_q {
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-  padding: 24px 24px 24px 3em;
-}
-
-.faq_item .faq_item_inner > .faq_item_q::-webkit-details-marker {
-  display: none;
-}
-
-.faq_item .faq_item_inner > .faq_item_q::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background: url("../images/faq_off.svg") no-repeat center / contain;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-}
-
-.faq_item .faq_item_inner[open] {
-  transition: none;
-}
-
-.faq_item .faq_item_inner[open] > .faq_item_q::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background: url("../images/faq_on.svg") no-repeat center / contain;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-}
-
-.faq_item_q {
-  position: relative;
-}
-
-.faq_item_a {
-  background-color: rgba(37, 117, 252, 0.8);
-  padding: 40px 24px 40px 3em;
-  position: relative;
-}
-
-
-.faq_item_close > .faq_item_a {
-  animation: fadeOut 0.5s ease !important;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  100% {
-    opacity: 0 !important;
-    transform: translateY(-10px) !important;
-  }
-}
-
-
-.faq_item_q::before,
-.faq_item_a::before {
-  width: 1em;
-  height: 1em;
-  display: block;
-  position: absolute;
-  left: 1em;
-}
-
-.faq_item_q::before {
-  content: "Q.";
-  top: 24px;
-}
-
-.faq_item_a::before {
-  content: "A.";
-  top: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .faq_inner {
-    padding: 60px 5%;
-    font-size: 0.9rem;
-  }
-
-  .faq_item .faq_item_inner > .faq_item_q {
-    padding: 24px 2rem;
-  }
-
-  .faq_item .faq_item_inner > .faq_item_q::after,
-  .faq_item .faq_item_inner[open] > .faq_item_q::after {
-    right: 0.5rem;
-  }
-
-  .faq_item_a {
-    padding: 40px 2rem;
-  }
-
-  .faq_item_q::before,
-  .faq_item_a::before {
-    left: 0.5em;
-  }
-}
-
-/*.faq_inner {
-  padding: 60px 90px;
-  background-color: rgba(194, 194, 208, 0.1);
-}
-
 .faq_item {
   background-color: #fff;
 }
@@ -866,7 +748,7 @@ textarea {
   .faq_item .faq_item_a p::before {
     margin-right: 0.5rem;
   }
-} */
+}
 
 /* FAQ内popupここから */
 
